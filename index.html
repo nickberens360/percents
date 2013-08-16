@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculate</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/jquery.js"></script>
+<script>
+	
+	function calc(){
+		var target = document.getElementById('target').value;
+		var context = document.getElementById('context').value;
+		
+		if(isNaN(target) || isNaN(context)){
+			alert("not a number");
+		}else{
+	    document.getElementById('result').innerHTML =(target / context * 100+ '&#37;');
+		}
+	}
+	
+	
+</script>
+
+
+</head>
+
+<body>
+<div class="wrap">
+	<div class="context">
+		Container width: <input type="text" id="context" placeholder="example: 960">
+	</div>
+	<div class="target">
+		Target width: <input type="text" id="target" placeholder="example: 120">
+	</div>
+	<div class="calc">
+		<input class="btns" type="submit" value="Calculate" onClick="calc()">
+		
+	</div>
+</div>
+
+<div class="lower">
+<div id="fe_text"><span id="result">Result: __________ &#37;</span></div><button id="d_clip_button" class="my_clip_button" title="Click me to copy to clipboard." data-clipboard-target="fe_text" data-clipboard-text="Default clipboard text from attribute"><b>Copy</b></button></div>
+</div>
+
+
+<script type="text/javascript" src="js/ZeroClipboard.js"></script> 
+<script language="JavaScript">
+
+  $(document).ready(function() {
+    var clip = new ZeroClipboard($("#d_clip_button"), {
+
+      moviePath: "js/ZeroClipboard.swf"
+    });
+
+    clip.on('load', function (client) {
+      debugstr("Flash movie loaded and ready.");
+    });
+
+    clip.on('noFlash', function (client) {
+      $(".demo-area").hide();
+      debugstr("Your browser has no Flash.");
+    });
+
+    clip.on('wrongFlash', function (client, args) {
+      $(".demo-area").hide();
+      debugstr("Flash 10.0.0+ is required but you are running Flash " + args.flashVersion.replace(/,/g, "."));
+    });
+
+    clip.on('complete', function (client, args) {
+      debugstr("Copied text to clipboard: " + args.text);
+    });
+
+    // jquery stuff (optional)
+    function debugstr(text) {
+      $("#d_debug").append($("<p>").text(text));
+    }
+
+    $("#clear-test").on("click", function(){
+      $("#fe_text").val("Copy me!");
+      $("#testarea").val("");
+    });
+  });
+</script>
+</body>
+</html>
