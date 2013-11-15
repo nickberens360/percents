@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Calculate</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/styles.css" />
-<script src="js/jquery.js"></script>
+
+
 <script>
 	
 	function calc(){
@@ -25,12 +27,18 @@
 </head>
 
 <body>
+
+
+<article class="whatitis">
+	<h1>Context Calculator</h1>
+	<p>A quick and dirty calculator for responsive layouts.</p>
+</article>
 <div class="wrap">
 	<div class="context">
-		Container width: <input type="text" id="context" placeholder="example: 960">
+		<label>Container width:</label> <input type="text" id="context" placeholder="example: 960">
 	</div>
 	<div class="target">
-		Target width: <input type="text" id="target" placeholder="example: 120">
+		<label>Target width:</label> <input type="text" id="target" placeholder="example: 120">
 	</div>
 	<div class="calc">
 		<input class="btns" type="submit" value="Calculate" onClick="calc()">
@@ -41,6 +49,8 @@
 <div class="lower">
 <div id="fe_text"><span id="result">Result: __________ &#37;</span></div><button id="d_clip_button" class="my_clip_button" title="Click me to copy to clipboard." data-clipboard-target="fe_text" data-clipboard-text="Default clipboard text from attribute"><b>Copy</b></button></div>
 </div>
+
+
 
 
 <script type="text/javascript" src="js/ZeroClipboard.js"></script> 
