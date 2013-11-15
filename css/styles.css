@@ -113,6 +113,24 @@ position: relative;
 top: 3px;
 margin-right: 14px;
 }
+.menu-toggle {
+z-index: 110;
+text-align: left;
+width: 75px;
+text-align: center;
+font-size: 44px;
+line-height: 1.5;
+cursor: pointer;
+background: rgba(84, 145, 252, 0.9);
+transition: all .25s;
+padding: 20px 25px;
+}
+.menu-toggle span {
+border: 2px solid rgba(255, 255, 255, 0.7);
+display: block;
+width: 100%;
+margin-bottom: 5px;
+}
 
 
 
