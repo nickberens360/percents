@@ -124,6 +124,8 @@ cursor: pointer;
 background: rgba(84, 145, 252, 0.9);
 transition: all .25s;
 padding: 20px 25px;
+position: fixed;
+top: 0;
 }
 .menu-toggle span {
 border: 2px solid rgba(255, 255, 255, 0.7);
